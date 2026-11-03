@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<title>DOLPHIN X</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090909;color:white;font-family:Arial}
+header{padding:25px 20px;background:#151515;border-bottom:2px solid #ff7900}
+.logo{font-size:40px}
+h1{color:#ff7900;letter-spacing:3px;margin:5px 0}
+main{padding:18px;max-width:650px;margin:auto}
+.card{background:#191919;border:1px solid #713900;border-radius:16px;padding:20px;margin:12px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{background:#191919;color:white;border:1px solid #713900;border-radius:15px;padding:20px 10px;min-height:120px}
+.tile b{display:block;color:#ff7900;margin:10px 0}
+button{cursor:pointer}
+.action{background:#ff7900;color:black;border:0;padding:15px;border-radius:10px;font-weight:bold;width:100%}
+small{color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">🐬</div>
+<h1>DOLPHIN X</h1>
+<small>PERSONAL DEVICE TOOLKIT</small>
+</header>
+<main>
+<div class="card">
+<h2>● СИСТЕМА ГОТОВА</h2>
+<p>Добро пожаловать в DOLPHIN X.</p>
+<small>Панель управления устройствами</small>
+</div>
+<div class="grid">
+<button class="tile" onclick="show('TV CONTROL','Управление совместимыми Smart TV через официальные интерфейсы.')">📺<b>TV CONTROL</b><small>Телевизоры</small></button>
+<button class="tile" onclick="show('BLUETOOTH','Для BLE-сканирования на iPhone потребуется нативное приложение.')">ᛒ<b>BLUETOOTH</b><small>Bluetooth устройства</small></button>
+<button class="tile" onclick="show('NFC LAB','Работа с совместимыми NFC-метками через Core NFC.')">📡<b>NFC LAB</b><small>NFC инструменты</small></button>
+<button class="tile" onclick="show('WI-FI LAB','Диагностика собственного Wi-Fi соединения.')">📶<b>WI-FI LAB</b><small>Сеть</small></button>
+<button class="tile" onclick="show('IR REMOTE','Для ИК-команд нужен внешний ИК-передатчик.')">🔴<b>IR REMOTE</b><small>Инфракрасный пульт</small></button>
+<button class="tile" onclick="show('SETTINGS','DOLPHIN X версия 1.0')">⚙️<b>SETTINGS</b><small>Настройки</small></button>
+</div>
+<div class="card">
+<h3 id="title">УСТРОЙСТВА</h3>
+<p id="description">Выбери инструмент выше.</p>
+<button class="action" onclick="show('DOLPHIN X','Выбери совместимое устройство. Управляй только своими устройствами или с разрешения владельца.')">ОТКРЫТЬ</button>
+</div>
+</main>
+<script>
+function show(t,d){
+document.getElementById('title').textContent=t;
+document.getElementById('description').textContent=d;
+}
+</script>
+</body>
+</html>
